@@ -8,19 +8,19 @@ class Th(Thread):
 
     def run(self):
 
-        print ("Hello ")
-        print (self.num)
-
-        t = Teste()
+        print ("Thread ")
+        t = Principal()
         t.testFn()
 
 
-class Teste:
+class Principal:
 
     a = Th(2)
     a.start()
 
+    mensagem = 'Variavel da classe principal'
+
     def testFn(self):
-        print ("teste funcao")
+        print ( self.mensagem )
 
 
