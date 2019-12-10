@@ -11,10 +11,16 @@ class Th(Thread):
         print ("Hello ")
         print (self.num)
 
+        t = Teste()
+        t.testFn()
+
 
 class Teste:
 
     a = Th(2)
     a.start()
+
+    def testFn(self):
+        print ("teste funcao")
 
 
